@@ -1,0 +1,133 @@
+/* ====== General Web Projects Style Sheet ======================= */
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    outline: 0;
+}
+
+.navbar { margin-bottom: 0px; }
+
+#intro h1 { margin-top:25px; margin-bottom: 20px; }
+#intro { padding-right: 30px; }
+
+/* ----- Details Panel ----- */
+#details .panel { margin: 25px 0 30px 0px; }
+#details .panel-heading {
+    background-color: #18BC9C;
+    border-color: #ccc;
+    color: #ffffff;
+}
+#details .panel-info { border-color: #18BC9C; }
+
+/* ====== Demo Pages =========================================== */
+
+/* ----- Angular Adopt-a-Dog ----- */
+#animals.panel { margin: 20px 20px 0px; }
+#animals .panel-heading { background-color: #18BC9C; border: 1px solid #18BC9C; }
+#animals .panel-body { background-color: #F9F9F9; border: 1px solid #CCC;padding-right:20px;  }
+#animals .panel-footer { background-color: #C0C6C6; border: 1px solid #C0C6C6; }
+#animals .btn.btn-tags, #animals .btn.btn-tags:hover { background-color: #FFF; color: #000; padding:3px 7px; border: 1px solid #EEE; }
+
+/* ----- JQuery Calculator ----- */
+#calculator { 
+    width: 250px;
+    background-color: #B7DAE2; 
+    box-shadow: 3px 3px 3px 3px #999;
+    border: 1px solid #B1D6E0;
+    margin: 30px 0 35px; 
+    padding: 20px 10px 15px 32px; }
+/*#calculator .calc-container { text-align: center; background-color: aqua; }*/
+#calculator input { text-align: right; /*border: 1px solid #CCC;*/ padding: 0 7px; }
+#calculator .btn { 
+    width: 45px; 
+    height: 45px; 
+    border: 1px solid #999; 
+    margin: 5px 3px; 
+    padding: 0px; }
+#calculator .btn:focus { background-color: #95a5a6; }
+#calculator .btn-tall { width: 45px; height: 100px; margin: 5px 27px 5px 3px; }
+#calculator .display { height: 45px; width: 83%; margin: 10px; }
+/*#calculator .row { margin: 10px; }*/
+
+
+/* ----- JQuery Random Quotes ----- */
+.random-quote { box-shadow: 3px 3px 3px 3px #BBB; margin: 30px 0 35px; padding: 40px; }
+
+/* ----- JQuery Sketchpad ----- */
+#fullgrid { display: table; width: 100%; border-collapse:collapse; }
+.sketchpad-grid { 
+    display: table-cell; 
+    float: left; 
+    overflow: hidden;
+    text-align:center; 
+    vertical-align: middle; 
+    background-color: #EEE; 
+    height: 20px; 
+    width: 20px; 
+    border: solid 1px #ccc; 
+    border-collapse: collapse;
+    margin:-1px; 
+    padding:0px; }
+.sketchpad-grid:hover { background-color: aquamarine; }
+/*.sketchpad-grid.active { background-color: skyblue; }*/
+/*.sketchpad-grid.noborder { border: 0px; }*/
+.sketchpad-row { clear:both; }
+
+/* ----- JQuery Image Slider ----- */
+#slider-content { text-align: center; width: 810px, margin: 0px auto; }
+#slider { 
+    width: 810px;
+    height: 505px; 
+	overflow: hidden;
+    margin: 30px auto; }
+#slider > img { 
+    float:left;
+    display: none;
+    width: 810px;
+    height: 505px; }
+#slider-content a.left { float: left; }
+#slider-content a.right { float: right; }
+
+/* ----- JQuery To Do List ----- */
+ul#listofitems { list-style: none; margin: 15px 0; padding: 0; }
+ul#listofitems li { margin-bottom: 5px; }
+
+/* ----- JSON Restaurant Search ----- */
+#restaurants { width: auto; padding: 30px 40px; }
+#restaurants.well { background-color: #f1f1f1; border: 1px solid #DDD;  }
+#restaurants h3 { margin-top: 5px; }
+
+/* ----- JSON Local Weather ----- */
+/*body.weatherBackgnd.day { 
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Altocumulus_over_Warsaw_1%2C_Poland%2C_June_26%2C_2005.jpg/640px-Altocumulus_over_Warsaw_1%2C_Poland%2C_June_26%2C_2005.jpg) top center repeat-y #fff;
+    background-size:cover; }
+body.weatherBackgnd.night { 
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/AustraliaSky.jpg/640px-AustraliaSky.jpg) top center repeat-y #fff;
+    background-size:cover; }*/
+#weather { 
+  /*  width: 400px; */
+    text-align:center;
+    background: top center;
+    background-color: #DDD; 
+    text-shadow: 1px 1px 1px #ffffff;
+    color: #FFF;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+    box-shadow: 3px 3px 3px 3px #AAA; 
+    border: 1px solid #999;
+    margin: 50px auto 35px; 
+    padding: 25px 25px 40px 30px; }
+#weather.day { background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Altocumulus_over_Warsaw_1%2C_Poland%2C_June_26%2C_2005.jpg/640px-Altocumulus_over_Warsaw_1%2C_Poland%2C_June_26%2C_2005.jpg); }
+#weather.night { background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/AustraliaSky.jpg/640px-AustraliaSky.jpg); } 
+
+/* ================ Miscellaneous ================ */
+.bold { font-weight: bold; }
+
+.green { color: #18BC9C; /*#8cc63f; */ }
+.purple { color: #92278f; }
+
+

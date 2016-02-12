@@ -1,0 +1,34 @@
+<div class="container below-nav">
+    <div class="row">
+        <div class="col-sm-9" id="intro">
+            <h1>JQuery/JS Image Slider</h1>
+            <p>This is a JQuery/JavaScript slider for displaying images. It automatically changes images, or you can click the  <strong>Previous</strong> or <strong>Next</strong> buttons to go backward or forward manually.</p>
+        </div>
+        <div class="col-sm-3" id="details">
+            <div class="panel panel-info">
+                <div class="panel-heading"><strong>Technologies Used</strong></div>
+                <div class="panel-body">JQuery/JavaScript<br />Bootstrap3<br />HTML5<br />CSS3</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-md-12">
+                <div id="slider-content">
+                    <div id="slider" style="margin-top:0px;">
+                        <img src="images/slider/background_02_lowres.jpg" id="1" alt="image 1" class="img-responsive" />
+                        <img src="images/slider/background_02_lowres.jpg" id="2" alt="image 2" class="img-responsive" />
+                        <img src="images/slider/background_03_lowres.jpg" id="3" alt="image 3" class="img-responsive" />
+                        <img src="images/slider/background_04_lowres.jpg" id="4" alt="image 4" class="img-responsive" />
+                        <img src="images/slider/background_05_lowres.jpg" id="5" alt="image 5" class="img-responsive" />
+                    </div> 
+                    <a href="#" title="Previous" onclick="prev(); return false;" class="btn btn-default left">Previous</a>
+                    <a href="#" title="Next" onclick="next(); return false;" class="btn btn-default right">Next</a>
+                </div>
+            </div>
+    </div>
+    <div class="row row-content">
+        <div id="fullgrid" style="margin-top:40px;margin-left:18px;"></div> 
+        <p>&nbsp;</p>
+    </div>
+</div>
+<script src="js/projects/imageSliderView.js"></script>

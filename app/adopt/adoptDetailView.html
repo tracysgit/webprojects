@@ -1,0 +1,62 @@
+<div class="container-fluid">
+    <div class="panel panel-default" id="animals">
+        <div class="panel-heading">
+          <span style="font-size:large;font-weight:bold;">{{vm.title}}</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="center-block img-responsive" style="margin:5px;" ng-src="{{vm.animal.imageUrl}}" title="{{vm.animal.animalName}}" />
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-5 bold">Name: </div>
+                        <div class="col-md-7">{{vm.animal.animalName}}</div>
+                        <!-- ng-repeat="animal in vm.animals" -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 bold">Age: </div>
+                        <div class="col-md-7">{{vm.animal.age}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 bold">Breed: </div>
+                        <div class="col-md-7">{{vm.animal.breed | date}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 bold">Adult Weight: </div>
+                        <div class="col-md-7">{{vm.animal.adultWeight}} pounds</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 bold">Good With: </div>
+                        <div class="col-md-7">{{vm.animal.goodWith}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 bold">Available: </div>
+                        <div class="col-md-7">{{vm.animal.entryDate}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 bold">Cost to Adopt: </div>
+                        <div class="col-md-7">{{vm.animal.price | currency}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 bold">ID #: </div>
+                        <div class="col-md-7">{{vm.animal.animalCode}}</div>
+                    </div>
+                    
+                </div> 
+                <div class="col-md-4">
+                    <div class="row">
+                        <strong>Description: </strong><br>{{vm.animal.description}}<br><br><strong>Tags: </strong><br>
+                        <span ng-repeat="tag in vm.animal.tags | orderBy">
+                <button class="btn btn-tags" style="font-size:smaller;margin-right:3px;margin-top:05px;">{{tag}}</button>
+            </span>
+                    </div>
+                </div>
+            </div>
+      </div>
+      <div class="panel-footer">
+          <a class="btn btn-default" data-ui-sref="adopt" style="width:80px;"><i class="glyphicon glyphicon-chevron-left"></i> Back</a>
+          <a class="btn btn-default" data-ui-sref="adoptEdit.info({animalId: vm.animal.animalId})" style="width:80px;margin-left:10px"> Edit</a>
+      </div> 
+    </div>
+</div>

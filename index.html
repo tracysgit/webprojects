@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Wildiris Web Projects">
+    <meta name="author" content="Wildiris Web Designs">
+
+    <title>Web Project Demos &middot; Wildiris</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link data-require="toastr@2.1.2" data-semver="2.1.2" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.css" />
+    <!--<link rel="stylesheet" href="css/app.css" />-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link href="css/freelancer.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body ng-app="projectManagement" id="page-top" class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+          <div class="navbar-header page-scroll">
+            <a class="navbar-brand" href="#page-top" data-ui-sref="home"><!--<img src="images/logo_wildiris.png" alt="Wildiris Web Projects" style="width:90px; height:50px; margin-top:-15px;margin-right:20px;" /> -->Web Projects</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+             <ul class="nav navbar-nav navbar-right">
+               <li class="hidden">
+                    <a href="#page-top"></a>
+               </li>
+               <li class="dropdown" ui-sref-active="active"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">AngularJS Demos&nbsp;<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref="adopt">Adopt A Dog</a></li>
+                        <li><a href="#page-top">This Website</a></li>
+                    </ul>
+               </li>
+               <li class="dropdown" ui-sref-active="active"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">JQuery/JS Demos&nbsp;<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref="calculator">Calculator</a></li>
+                        <li><a ui-sref="sketchpad">Sketchpad</a></li>
+                        <li role="separator" class="divider" style="display:none;"></li>
+                        <li><a ui-sref="todoList">To-Do List</a></li>
+                        <li><a ui-sref="randomQuotes">Random Quotes</a></li>
+                        <li><a ui-sref="imageSlider">Image Slider</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" ui-sref-active="active"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">JSON Demos&nbsp;<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref="restaurantSearch">Restaurant Search</a></li>
+                        <li><a ui-sref="localWeather">Local Weather</a></li>
+                    </ul>
+                </li>
+               <!-- <li><a ui-sref="productList">Product List</a></li>
+                <li><a ui-sref="productEdit.info({productId:0})"><i class="glyphicon glyphicon-plus"></i> Add Product</a></li> -->
+                <!--<li class="page-scroll">
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                <li class="page-scroll">
+                    <a href="#contact">Contact</a>
+                </li>-->
+             </ul>
+          </div> <!-- /.navbar-collapse -->
+      </div> <!-- /.container -->
+    </nav> 
+  
+    <div id="page-content">
+        <div data-ui-view></div>
+    </div> 
+        
+    <!-- Library Scripts -->
+    <script data-require="jquery@*" data-semver="2.1.4" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.3.6" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script data-require="angular-resource@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular-resource.js"></script>
+    <script data-require="angular-mocks@1.4.3" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular-mocks.js"></script>
+    <script data-require="ui-router@0.2.15" data-semver="0.2.15" src="https://cdn.rawgit.com/angular-ui/ui-router/805e69bae319e922e4d3265b7ef565058aaff850/release/angular-ui-router.js"></script>  
+  <!--  <script data-require="ui-mask@*" data-semver="1.6.3" src="https://cdn.rawgit.com/angular-ui/ui-mask/1094e24c70f41e9f4cff7debb28baadbf9ee889b/dist/mask.js"></script> -->
+    <script src="js/ui-bootstrap-tpls-1.1.0.min.js"></script>
+    <script data-require="toastr@2.1.2" data-semver="2.1.2" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.js"></script>
+ <!--   <script data-require="d3@3.5.3" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+    <script data-require="angular-charts@0.0.1" data-semver="0.0.1" src="angular-charts.js"></script> -->
+      
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/freelancer/classie.js"></script>
+    <script src="js/freelancer/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/freelancer/jqBootstrapValidation.js"></script>
+    <script src="js/freelancer/contact_me.js"></script>
+
+    <!-- Bootstrap Theme JavaScript -->
+    <script src="js/freelancer/freelancer.js"></script>
+          
+    <!-- Application Scripts -->
+    <script src="app/app.js"></script>
+      
+    <!-- Services -->
+    <script src="common/services/common.services.js"></script>
+    <script src="common/services/productResource.js"></script>
+    <script src="common/services/productResourceMock.js"></script>
+    <script src="common/services/productService.js"></script>
+    <script src="common/services/adoptResource.js"></script>
+    <script src="common/services/adoptResourceMock.js"></script>
+    <script src="common/services/adoptService.js"></script>
+      
+    <!-- Product Controllers -->
+    <script src="app/products/ProductListCtrl.js"></script>
+    <script src="app/products/ProductDetailCtrl.js"></script>
+    <script src="app/products/ProductEditCtrl.js"></script>
+    <script src="app/adopt/adoptListCtrl.js"></script>
+    <script src="app/adopt/adoptDetailCtrl.js"></script>
+    <script src="app/adopt/adoptEditCtrl.js"></script>
+    <script src="app/projects/calculatorCtrl.js"></script> 
+    <script src="app/projects/sketchpadCtrl.js"></script>  
+    <script src="app/projects/imageSliderCtrl.js"></script>
+    <script src="app/projects/randomQuotesCtrl.js"></script>
+    <script src="app/projects/todoListCtrl.js"></script>
+    <script src="app/projects/restaurantSearchCtrl.js"></script>
+    <script src="app/projects/localWeatherCtrl.js"></script>
+    
+    
+    
+  </body>
+
+</html>

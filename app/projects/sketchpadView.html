@@ -1,0 +1,53 @@
+<div class="container below-nav">
+    <div class="row">
+        <div class="col-sm-9" id="intro">
+            <h1>JQuery/JS Sketchpad</h1>
+            <p>Move your mouse over a grid square to change its color. Click the buttons below to experiment with other colors.</p>
+        </div>
+        <div class="col-sm-3" id="details">
+            <div class="panel panel-info">
+                <div class="panel-heading"><strong>Technologies Used</strong></div>
+                <div class="panel-body">JQuery/JavaScript<br />Bootstrap3<br />HTML5<br />CSS3</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-md-12">
+               <div id="button-group">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="chooseColor" name="chooseColor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-right:10px;">Select a Color &nbsp;<span class="caret"></span></button>
+                    <ul class="dropdown-menu" aria-labelledby="chooseColor">
+                        <li><a name="red" class="select">Red</a></li>
+                        <li><a name="yellow" class="select">Yellow</a></li>
+                        <li><a name="green" class="select">Green</a></li>
+                        <li><a name="blue" class="select">Blue</a></li>
+                        <li><a name="orange" class="select">Orange</a></li>
+                        <li><a name="purple" class="select">Purple</a></li>
+                        <li><a name="white" class="select">White</a></li>
+                        <li><a name="black" class="select">Black</a></li>
+                    </ul>
+                  
+              <!--      <select id="chooseColor" name="chooseColor" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-right:10px;"><span class="caret"></span>
+                                <option value="blue">Select a Color</option>
+                                <option value="red">Red</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="green">Green</option>
+                                <option value="blue">Blue</option>
+                                <option value="orange">Orange</option>
+                                <option value="purple">Purple</option>
+                                <option value="white">White</option>
+                                <option value="black">Black</option>
+                    </select> -->
+                    <button name="randomColor" class="btn btn-default" style="margin-right:10px;">Random Color</button>
+                    <button name="clearGrid" class="btn btn-default" style="margin-right:10px;">Clear the Grid</button>               
+                    <button name="createGrid" class="btn btn-default" style="margin-right:10px;">Create new grid</button>
+                    <button name="leaveTrail" class="btn btn-default" style="margin-right:10px;">Leave a Trail</button>
+                    <input type="checkbox" name="showBorder" id="showBorder" value="Y" checked="checked"> Show Borders
+            </div>
+         </div>  
+    </div>
+    <div class="row row-content">
+        <div id="fullgrid" style="margin-top:40px;margin-left:18px;"></div> 
+        <p>&nbsp;</p>
+    </div>
+</div>
+<script src="js/projects/sketchpadView.js"></script>

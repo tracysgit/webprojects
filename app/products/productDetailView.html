@@ -1,0 +1,51 @@
+<div class="panel panel-primary" id="productDetail">
+        <div class="panel-heading">
+          <span style="font-size:large;font-weight:bold;">{{vm.title}}</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-7">
+                    <div class="row">
+                        <div class="col-xs-3">Name: </div>
+                        <div class="col-xs-8"><strong>{{vm.product.productName}}</strong></div>
+                        <!-- ng-repeat="product in vm.products" -->
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">Code: </div>
+                        <div class="col-xs-8">{{vm.product.productCode}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">Description: </div>
+                        <div class="col-xs-8">{{vm.product.description}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">Availability: </div>
+                        <div class="col-xs-8">{{vm.product.releaseDate | date}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">Cost: </div>
+                        <div class="col-xs-8">{{vm.product.cost | currency}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">Price: </div>
+                        <div class="col-xs-8">{{vm.product.price | currency}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">Margin: </div>
+                        <div class="col-xs-8">{{vm.marginPercent | number:0}}%</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">Tags: </div>
+                        <div class="col-xs-8">{{vm.product.tagList}}</div>
+                    </div>
+                </div> 
+                <div class="col-xs-5">
+                    <img class="center-block img-responsive" style="width:200px;margin:5px;" ng-src="{{vm.product.imageUrl}}" title="{{vm.product.productName}}" />
+                </div>
+            </div>
+      </div>
+      <div class="panel-footer">
+          <a class="btn btn-default" data-ui-sref="productList" style="width:80px;"><i class="glyphicon glyphicon-chevron-left"></i> Back</a>
+          <a class="btn btn-primary" data-ui-sref="productEdit.info({productId: vm.product.productId})" style="width:80px;margin-left:10px"> Edit</a>
+      </div>
+</div>                                            

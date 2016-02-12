@@ -1,0 +1,50 @@
+<form name="animalForm" role="form" class="form-horizontal" novalidate>
+    <div class="form-group" ng-class="{'has-error':animalForm.inputAnimalName.$invalid && animalForm.inputAnimalName.$dirty}">
+        <label for="inputAnimalName" class="control-label col-xs-3">Animal Name</label>
+        <div class="col-xs-9">
+            <input id="inputAnimalName" name="inputAnimalName" type="text" placeholder="Animal Name (required)" class="form-control" ng-model="vm.animal.animalName" required ng-minlength="4" ng-maxlength="20" />
+            <span class="help-block has-error">
+                <span ng-show="animalForm.inputAnimalName.$error.required">Animal name is required.</span>
+                <span ng-show="animalForm.inputAnimalName.$error.minlength">Animal name must be at least 4 characters.</span>
+                <span ng-show="animalForm.inputAnimalName.$error.maxlength">Animal name must be less than 20 characters.</span>
+            </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputDescription" class="control-label col-xs-3">Description</label>
+        <div class="col-xs-9">
+            <textarea id="inputDescription" rows="3" placeholder="Description" class="form-control" ng-model="vm.animal.description" />
+        </div>
+    </div>
+    <div class="form-group" ng-class="{'has-error':animalForm.inputAnimalCode.$invalid && animalForm.inputAnimalName.$dirty}">
+        <label for="inputAnimalCode" class="control-label col-xs-3">Animal Code</label>
+        <div class="col-xs-4">
+            <input id="inputAnimalCode" name="inputAnimalCode" type="text" class="form-control" ng-model="vm.animal.animalCode" placeholder="Animal Code (required)" required /><span class="help-block has-error" ng-show="animalForm.inputAnimalCode.$invalid && animalForm.inputAnimalCode.$dirty">Animal code is required.</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-xs-3 control-label" for="inputAvailabilityDate">Availability</label>
+        <div class="col-xs-4">
+            <input id="inputAvailabilityDate" type="text" class="form-control" placeholder="MM/DD/YYYY" ng-model="vm.animal.entryDate" is-open="vm.opened " />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputAge" class="control-label col-xs-3">Age</label>
+        <div class="col-xs-4">
+            <input id="inputAge" type="text" class="form-control" placeholder="Age" ng-model="vm.animal.age" />  
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputBreed" class="control-label col-xs-3">Breed</label>
+        <div class="col-xs-4">
+            <input id="inputBreed" placeholder="Breed" class="form-control" ng-model="vm.animal.breed" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-xs-3 control-label">&nbsp;</label>
+        <div class="col-xs-9">
+            <button class="btn btn-primary" ng-click="vm.submit()" style="width:80px;margin-left:0px" ng-disabled="animalForm.$invalid">Save</button>
+            <button class="btn btn-default" ng-click="vm.cancel()" style="width:90px;margin-left:10px">Cancel</button>
+        </div>
+    </div>
+</form>

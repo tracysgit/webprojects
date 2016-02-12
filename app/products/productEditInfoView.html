@@ -1,0 +1,46 @@
+<form name="productForm" role="form" class="form-horizontal" novalidate>
+    <legend>Basic Product Information</legend>
+    <div class="form-group" ng-class="{'has-error':productForm.inputProductName.$invalid && productForm.inputProductName.$dirty}">
+        <label for="inputProductName" class="control-label col-xs-3">Product Name</label>
+        <div class="col-xs-9">
+            <input id="inputProductName" name="inputProductName" type="text" placeholder="Product Name (required)" class="form-control" ng-model="vm.product.productName" required ng-minlength="4" ng-maxlength="12" />
+            <span class="help-block has-error">
+                <span ng-show="productForm.inputProductName.$error.required">Product name is required.</span>
+                <span ng-show="productForm.inputProductName.$error.minlength">Product name must be at least 4 characters.</span>
+                <span ng-show="productForm.inputProductName.$error.maxlength">Product name must less than 12 characters.</span>
+            </span>
+        </div>
+    </div>
+    <div class="form-group" ng-class="{'has-error':productForm.inputProductCode.$invalid && productForm.inputProductName.$dirty}">
+        <label for="inputProductCode" class="control-label col-xs-3">Product Code</label>
+        <div class="col-xs-9">
+            <input id="inputProductCode" name="inputProductCode" type="text" class="form-control" ng-model="vm.product.productCode" placeholder="Product Code (required)" required /><span class="help-block has-error" ng-show="productForm.inputProductCode.$invalid && productForm.inputProductCode.$dirty">Product code is required.</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-xs-3 control-label" for="inputAvailabilityDate">Availability</label>
+        <div class="col-xs-4">
+            <div class="input-group">
+                <input id="inputAvailabilityDate" type="text" class="form-control" placeholder="MM/DD/YYYY" ng-model="vm.product.releaseDate" is-open="vm.opened " />
+                <!--<span class="input-group-btn">
+                        <button class="btn btn-default" ng-click="vm.open($event)">
+                            <i class="glyphicon glyphicon-calendar" />
+                        </button>
+                    </span>-->
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputDescription" class="control-label col-xs-3">Description</label>
+        <div class="col-xs-9">
+            <textarea id="inputDescription" rows="3" placeholder="Description" class="form-control" ng-model="vm.product.description" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-xs-3 control-label">&nbsp;</label>
+        <div class="col-xs-9">
+            <button class="btn btn-primary" ng-click="vm.submit()" style="width:80px;margin-left:0px" ng-disabled="productForm.$invalid">Save</button>
+            <button class="btn btn-default" ng-click="vm.cancel()" style="width:70px;margin-left:10px">Cancel</button>
+        </div>
+    </div>
+</form>

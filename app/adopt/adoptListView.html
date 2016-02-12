@@ -1,0 +1,98 @@
+ <div class="container">
+    <div class="row">
+        <div class="col-sm-9" id="intro">
+            <h1>AngularJS Adopt-a-Pet</h1>
+            <p>This demo displays a table of pretend dogs available for adoption. Click a name for details about a particular dog, or click <strong>Edit</strong> to modify the JSON data.</p>
+        </div>
+        <div class="col-sm-3" id="details">
+            <div class="panel panel-info">
+                <div class="panel-heading"><strong>Technologies Used</strong></div>
+                <div class="panel-body">AngularJS<br>JSON Data Source<br>JQuery/JavaScript<br />Bootstrap3<br />HTML5<br />CSS3</div>
+            </div>
+        </div>
+    </div>
+ </div>   
+<div class="container-fluid">
+    <div class="panel panel-default" id="animals"> <!-- ng-init='vm.animals = [{
+            "animalId": 1,
+            "animalName": "Arthur",
+            "animalCode": "GDN-0011",
+            "entryDate": "01/04/16",
+            "description": "Goofy, energetic and lovable",
+            "cost": 9.00,
+            "price": 90.00,
+            "category": "dog",
+            "breed": "beagle mix",
+            "age": "elderly",
+            "adultWeight": 40,
+            "tags": ["dog", "adult", "short hair"],
+            "imageUrl": "images/adopt/arthur.jpg"
+        }, {
+            "animalId": 2,
+            "animalName": "Barney",
+            "animalCode": "GDN-0014",
+            "entryDate": "08/08/15",
+            "description": "Sweet, silly, and loves to walk",
+            "cost": 9.00,
+            "price": 120.00,
+            "category": "dog",
+            "breed": "pomeranian",
+            "age": "young",
+            "adultWeight": 20,
+            "tags": ["dog", "young", "long hair"],
+            "imageUrl": "images/adopt/barney.jpg"
+        }, {
+            "animalId": 3,
+            "animalName": "Boris",
+            "animalCode": "GDN-0028",
+            "entryDate": "05/12/15",
+            "description": "Cuddly, vocal and even-tempered",
+            "cost": 9.00,
+            "price": 200.00,
+            "category": "dog",
+            "breed": "husky",
+            "age": "puppy",
+            "adultWeight": 80,
+            "tags": ["dog", "puppy", "medium hair"],
+            "imageUrl": "images/adopt/boris.jpg"
+        }]'   -->
+        <div class="panel-heading">
+          <span style="font-size:large;font-weight:bold;">Adopt a Dog</span>
+        </div>
+        <div class="panel-body">
+          <p><img src="images/adopt/icon-dog-green.png" style="float:left; width:100px;margin:10px 30px 30px 20px;" /><br><br>Adopt-a-Dog helps you adopt a wonderful dog into your loving home. View the list of available dogs, and then click a name to learn more about a particular dog.</p>
+          <hr>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>
+                  <button type="button" ng-click="vm.toggleImage()" class="btn btn-default" style="margin-left:5px;">{{vm.showImage ? "Hide" : "Show"}} Image</button>
+                </th>
+                <th>Name of Dog</th>
+                <th>Age</th>
+                <th>Breed</th>
+                <th>Adult Weight</th>
+                <th>Available</th>
+                <th>ID #</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="animal in vm.animals">
+                <td>
+                    <a ui-sref="adoptDetail({animalId: animal.animalId})"><img ng-src="{{animal.imageUrl}}" title="{{animal.animalName}}" alt="{{animal.animalName}}" style="width:150px;margin:5px;" ng-if="vm.showImage" /></a>
+                </td>
+                <td><a ui-sref="adoptDetail({animalId:animal.animalId})" style="font-weight:bold;">{{animal.animalName}}</a></td>
+                <td>{{animal.age}}</td>
+                <td>{{animal.breed}}</td>
+                <td>{{animal.adultWeight}}</td>
+                <td>{{animal.entryDate}}</td>
+                <td>{{animal.animalCode}}</td>
+                <td><a class="btn btn-default" data-ui-sref="adoptEdit.info({animalId:animal.animalId})" style="width:80px;margin-left:0px"> Edit</a></td>
+             </tr>
+            </tbody>
+          </table>
+        </div> 
+    </div>
+</div>
+ <p>&nbsp;</p>

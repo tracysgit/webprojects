@@ -1,0 +1,33 @@
+      <div class="panel panel-primary" id="products">
+        <div class="panel-heading">
+          <span style="font-size:large;font-weight:bold;">ACME Product Management</span>
+        </div>
+        <div class="panel-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>
+                  <button type="button" ng-click="vm.toggleImage()" class="btn btn-primary">{{vm.showImage ? "Hide" : "Show"}} Image</button>
+                </th>
+                <th>Product</th>
+                <th>Code</th>
+                <th>Available</th>
+                <th>Price</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="product in vm.products">
+                <td>
+                    <a ui-sref="productDetail({productId: product.productId})"><img ng-src="{{product.imageUrl}}" title="{{product.productName}}" alt="{{product.productName}}" style="width:50px;margin:5px;" ng-if="vm.showImage" /></a>
+                </td>
+                <td><a ui-sref="productDetail({productId:product.productId})">{{product.productName}}</a></td>
+                <td>{{product.productCode}}</td>
+                <td>{{product.releaseDate}}</td>
+                <td>{{product.price | currency }}</td>
+                <td><a class="btn btn-primary" data-ui-sref="productEdit.info({productId:product.productId})" style="width:80px;margin-left:0px"> Edit</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>

@@ -1,0 +1,43 @@
+<div class="container below-nav">
+    <div class="row">
+        <div class="col-sm-9" id="intro">
+            <h1>JSON Restaurant Search</h1>
+            <p>Select a restaurant from the drop-down list below to display JSON-format information about the restaurant.</p>
+            <div class="container-fluid"> 
+                            <div class="row">
+                                <div class="dropdown" id="dropdown">
+                                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-top:20px;">Select a Restaurant &nbsp;<span class="caret"></span>
+                                      </button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="resSelect">
+                                          <li><a href="#" name="0" class="select">Option 1</a></li>
+                                          <li><a href="#" name="1" class="select">Option 2</a></li>
+                                          <li><a href="#" name="2" class="select">Option 3</a></li>
+                                          <li><a href="#" name="3" class="select">Option 4</a></li>
+                                          <li><a href="#" name="4" class="select">Option 5</a></li>
+                                          <li><a href="#" name="5" class="select">Option 6</a></li>
+                                      </ul>
+                                </div>
+                            </div>
+                            <div class="row" id="restaurants" style="margin:35px 0;">
+                               <div class="col-sm-10">
+                                  <h3 id="resName"></h3>
+                                  <h5><span id="resStreetNum"></span>&nbsp;<span id="resStreetName"></span></h5>
+                                  <p id="resType" style="margin-top:20px;"></p>
+                                  <p id="resDesc"></p>
+                                  <ul id="resSpecials"></ul>
+                               </div>
+                               <div class="col-sm-2">
+                                  <div id="resLogo"></div>
+                               </div>
+                            </div>
+            </div>
+        </div>
+        <div class="col-sm-3" id="details">
+            <div class="panel panel-info">
+                <div class="panel-heading"><strong>Technologies Used</strong></div>
+                <div class="panel-body">JSON Data Source<br>JQuery/JavaScript<br />Bootstrap3<br />HTML5<br />CSS3</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/projects/restaurantSearchView.js"></script>
